@@ -6,7 +6,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class HomeController extends Controller
+class CatalogController extends Controller
 {
     public function catalog(request $r) {
         if (!empty($r->all())) {

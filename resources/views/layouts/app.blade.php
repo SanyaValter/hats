@@ -35,7 +35,7 @@
 
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                                    <a class="btn fs-5" href="">{{ __('Каталог') }}</a>
+                                    <a class="btn fs-5" href="{{route('catalog')}}">{{ __('Каталог') }}</a>
                          </li>
                          <li class="nav-item">
                                     <a class="btn fs-5" href="">{{ __('Контакты') }}</a>

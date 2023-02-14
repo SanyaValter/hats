@@ -28,6 +28,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/',[MainController::class,'main'])->name('main');
 
 Route::get('/catalog',[CatalogController::class,'catalog'])->name('catalog');
+
 Route::get('/catalog/details/{product_id}', [HomeController::class, 'details'])->name('details');
 
 

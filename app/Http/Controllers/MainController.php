@@ -9,4 +9,7 @@ class MainController extends Controller
     public function main() {
         return view('main');
     }
+    public function Contacts() {
+        return view('Contacts');
+    }
 }

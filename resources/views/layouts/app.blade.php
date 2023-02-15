@@ -30,9 +30,29 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                           
-                    </ul>
 
+                    </ul>
+                    <ul class="navbar">
+                        <li class="navbar">
+                            <a class="text-dark text-decoration-none fs-5 px-3 " href="{{route('catalog')}}">Продукция и услуги</a>
+                        </li>
+                        <li class="nav-item dropdown navbar px-3">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Контакты</a>
+
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="}">Написать нам</a>
+                                <a class="dropdown-item" href="}">Контакты</a>
+                        </li>
+                        <li class="nav-item dropdown navbar px-3">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Клиентам и партнерам</a>
+
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="}">Работа в компании</a>
+                                <a class="dropdown-item" href="}">Стандарты качества</a>
+                                <a class="dropdown-item" href="}">Клиентам и партнерам</a>
+                        </li>
+                    </ul>
+{{--
                     <ul class="navbar-nav">
                         <li class="nav-item">
                                     <a class="btn fs-5" href="{{route('catalog')}}">{{ __('Каталог') }}</a>
@@ -47,27 +67,36 @@
                          <li class="nav-item">
                                     <a class="btn fs-5" href="">{{ __('Работа в компании') }}</a>
                          </li>
-                    </ul>
-
+                    </ul> --}}
+                        {{-- <ul>
+                            <li class="navbar">
+                                <div class="input-group rounded">
+                                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                    <span class="input-group-text border-0" id="search-addon">
+                                      Поиск
+                                    </span>
+                                  </div>
+                            </li>
+                        </ul> --}}
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link btn" href="{{ route('login') }}">{{ __('Войти') }}</a>
+                                    <a class="nav-link btn fs-4" href="{{ route('login') }}">{{ __('Войти') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link btn" href="{{ route('register') }}">{{ __('Зарегистрироваться') }}</a>
+                                    <a class="nav-link btn fs-4" href="{{ route('register') }}">{{ __('Зарегистрироваться') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->email }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

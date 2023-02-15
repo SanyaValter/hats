@@ -11,10 +11,8 @@ class CatalogController extends Controller
     public function catalog(request $r) {
         if (!empty($r->all())) {
             $table =DB::table('products');
-            
+
             isset($r->category) ? $table->where('category',$r->category) : null;
-            
-            isset($r->field) ? $table->orderBy($r->field, $r->order) : null;
 
             $products = $table->get();
         } else {

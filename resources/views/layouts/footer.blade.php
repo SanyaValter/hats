@@ -15,7 +15,7 @@
                         Основные разделы сайта
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Каталог</a>
+                        <a href="{{route('catalog')}}" class="text-reset">Каталог</a>
                     </p>
                     <p>
                         <a href="#!" class="text-reset">Контакты</a>
@@ -59,10 +59,19 @@
                 </div>
                 </div>
             </section>
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                    <div class="col-md-4 d-flex align-items-center">
+                      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                        <img src="" alt="">
+                      </a>
+                      <span class="mb-3 mb-md-0 mx-4">  <a class="text-reset fw-bold" href="">Шапки онлайн</a> © 2023</span>
+                    </div>
 
-            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                © 2023
-                <a class="text-reset fw-bold" href="">Шапки онлайн</a>
+                    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex mx-5">
+                      <li class="ms-3"><a class="text-muted" href="#"><img src="img/tg.png" width="24" height="24" alt=""></a></li>
+                      <li class="ms-3"><a class="text-muted" href="#"><img src="img/vk.png" width="24" height="24" alt=""></a></li>
+                    </ul>
+                  </footer>
             </div>
-
         </footer>

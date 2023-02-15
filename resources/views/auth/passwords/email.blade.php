@@ -34,6 +34,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Восстановить') }}
                                 </button>
+                                <a href="{{route('login')}}" class="text-decoration-none px-3">назад</a>
                             </div>
                         </div>
                     </form>

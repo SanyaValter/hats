@@ -39,6 +39,7 @@
                             </div>
                         </div>
 
+
                         <div class="row mb-3">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Подтверждение пароля') }}</label>
 
@@ -46,6 +47,30 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+
+                        <div class="row mb-1">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Юридическое лицо') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-1">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="check" id="check" {{ old('remember') ? 'checked' : '' }} required >
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('обработку персональных данных') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="text-center">
                              <p> Уже зарегистрированы?<a class="btn btn-link text-decoration-none text-dark px-1  " href="{{ route('login') }}">Войти</a></p>
                            </div>

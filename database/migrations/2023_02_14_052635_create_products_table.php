@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('text');
             $table->string('img');
+            $table->string('country');
             $table->integer('year');
             $table->integer('price');
             $table->string('category');

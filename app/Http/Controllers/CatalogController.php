@@ -14,6 +14,7 @@ class CatalogController extends Controller
 
             isset($r->category) ? $table->where('category',$r->category) : null;
 
+
             $products = $table->get();
         } else {
             $products = Product::orderBy('created_at')->get();
@@ -25,6 +26,6 @@ class CatalogController extends Controller
     public function details($product_id)
     {
         $product = Product::find($product_id);
-        return view('product', compact('product'));
+        return view('main', compact('product'));
     }
 }

@@ -18,12 +18,12 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-xl navbar-light bg-white shadow-sm">
             <div class="container">
                     <a class="navbar-brand waves-effect fs-3 h2" href="{{ url('/') }}">
                         Шапки
                     </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -41,8 +41,10 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
-
-                        <input type="search" placeholder="Поиск" class="form-control me-4">
+                        <form method="get" action="{{route('search')}}">
+                            <input type="search" placeholder="Поиск" id="s" name="s" class="form-control me-4">
+                            <button type="submit">Найти</button>
+                        </form> 
 
                         <div class="dropdown mt-2 me-3">
                             <a class="dropdown-toggle text-decoration-none text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -59,13 +61,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item me-2">
-                                    <a class="nav-link btn btn-outline-dark" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="btn btn-outline-dark col-12" href="{{ route('login') }}">{{ __('Войти') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link btn btn-dark text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class=" btn btn-dark text-white col-12" href="{{ route('register') }}">{{ __('Зарегистрироваться') }}</a>
                                 </li>
                             @endif
                         @else

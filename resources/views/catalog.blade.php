@@ -52,8 +52,12 @@
                 <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas consequatur, tenetur iusto modi hic illo, earum neque provident quia quam dolore saepe reprehenderit velit recusandae laboriosam esse laudantium, maxime odio?</p>
                 <div class="text-center fs-4">Цена: {{$p->price}}</div>
             </div>
-            <img src="{{asset('img/'.$p->img)}}" alt="" class="featurette-image mx-auto img-fluid" style="max-width: 15%;">
-            <p class="btn btn-outline-dark">Купить</p>
+            <img src="{{asset('img/'.$p->img)}}" alt="" class="featurette-image mx-auto img-fluid" style="max-width: 20%;">
+
+           <form action="{{ route('addToCart',$p->id) }}" method="post">
+            @csrf
+            <button class="btn btn-outline-dark" type="submit">Добавить в корзину</button>
+        </form>
         </div>
     </div>
     <hr>

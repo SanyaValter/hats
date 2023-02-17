@@ -34,17 +34,18 @@
                     </ul>
 
                     <div>
-                        <a class="text-decoration-none text-dark me-4 fs-5" href="{{ route('catalog') }}">Продукция и услуги</a>
-                        <a class="text-decoration-none text-dark me-4 fs-5" href="{{ route('catalog') }}">О компании</a>
+                        <a class="text-decoration-none text-dark me-4 fs-5" href="{{ route('catalog') }}">Каталог</a>
+                        <a class="text-decoration-none text-dark me-4 fs-5" href="{{ route('aboutUs') }}">О нас</a>
                         <a class="text-decoration-none text-dark me-4 fs-5" href="{{ route('Contacts') }}">Контакты</a>
                     </div>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <form method="get" action="{{route('search')}}">
+                    <ul class="navbar-nav ms-auto ">
                         <form method="get" action="{{route('search')}}">
-                            <input type="search" placeholder="Поиск" id="s" name="s" class="form-control me-4">
-                            <button type="submit">Найти</button>
-                        </form> 
+                            <input type="search" placeholder="Поиск.." id="search" name="search" class="form-control ">
+                            <button class="btn px-4" type="submit">Найти</button>
+                        </form>
+
 
                         <div class="dropdown mt-2 me-3">
                             <a class="dropdown-toggle text-decoration-none text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -77,6 +78,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('cartPage') }}">Корзина</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

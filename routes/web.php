@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/',[MainController::class,'main'])->name('main');
 Route::get('/Contacts',[MainController::class,'Contacts'])->name('Contacts');
 Route::get('/search',[MainController::class,'search'])->name('search');
+Route::get('/aboutUs',[MainController::class,'aboutUs'])->name('aboutUs');
+
+Route::post('/cart/{id}',[CartController::class,'addToCart'])->name('addToCart');
+Route::get('/cart',[CartController::class,'index'])->name('cartPage');
+Route::post('/cart/{id}/delete',[CartController::class,'deleteFromCart'])->name('deleteFromCart');
 
 Route::get('/catalog',[CatalogController::class,'catalog'])->name('catalog');
 

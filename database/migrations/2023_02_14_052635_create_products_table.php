@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('year');
             $table->integer('price');
             $table->string('category');
+            $table->integer('count');
             $table->timestamps();
         });
     }

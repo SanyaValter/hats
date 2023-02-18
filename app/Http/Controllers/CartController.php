@@ -24,11 +24,14 @@ class CartController extends Controller
         session()->put('cart', $cart);
         DB::table('products')->where('id', $product_id)->decrement('count');
 
-        return to_route('catalog');
+        return back();
     }
 
     public function index()
     {
+        if(!session()->has('cart')) {
+            session()->put('cart',[]);
+        }
         $products = session()->get('cart');
         return view('cart', compact('products'));
     }

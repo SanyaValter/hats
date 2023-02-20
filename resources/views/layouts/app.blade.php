@@ -37,6 +37,7 @@
                         <a class="text-decoration-none text-dark me-4 fs-5" href="{{ route('catalog') }}">Каталог</a>
                         <a class="text-decoration-none text-dark me-4 fs-5" href="{{ route('aboutUs') }}">О нас</a>
                         <a class="text-decoration-none text-dark me-4 fs-5" href="{{ route('Contacts') }}">Контакты</a>
+                        <a class="text-decoration-none text-dark me-4 fs-5" href="{{ route('cartPage') }}">Корзина</a>
                     </div>
 
                     <form method="get" action="{{route('search')}}">
@@ -78,7 +79,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('cartPage') }}">Корзина</a>
+                                    
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -96,7 +97,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
         @include('layouts.footer')

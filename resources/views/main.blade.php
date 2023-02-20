@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" href="{{asset('css\main.css')}}">
+
+    <video  autoplay muted loop id="Video">
+  <source  src="{{asset('video\video.mp4')}}" type="video/mp4">
+</video>
+
 
     <section>
         <div class="position-relative overflow-hidden p-3 p-md-3 m-md-3 text-center  fixed-top">

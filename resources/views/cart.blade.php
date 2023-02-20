@@ -6,16 +6,20 @@
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-10">
   
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="fw-normal mb-0 text-black">Корзина</h3>
+          <div  class="d-flex justify-content-between align-items-center mb-4">
           </div>
+          @php
+          $sum = 0;
+          @endphp
             @forelse  ($products as $product_id => $product)
                 @php
                     $qty = $product['qty'];
                     $product = $products[$product_id]['product'];
+                    $amount = $product->price * $qty;
+
+                    $sum = $sum+$amount;
 
                  @endphp
-                 
                  <div class="card rounded-3 mb-4">
             <div class="card-body p-4">
               <div class="row d-flex justify-content-between align-items-center">
@@ -25,7 +29,7 @@
                     class="img-fluid rounded-3" alt="Cotton T-shirt">
                 </div>
                 <div class="col-md-4 col-lg-3 col-xl-3">
-                  <p class="lead fw-normal mb-2">{{$product->name}}</p>
+                  <p class="lead fw-normal mb-2 fs-3"><b>{{$product->name}}</b></p>
                   <p><span class="text-muted">Год выпуска: </span>{{$product->year}}</p>
                 </div>
                 <div class="col-md-4 col-lg-3 col-xl-2 d-flex">
@@ -54,7 +58,7 @@
                 
                 </div>
                 <div class="col-md-4 col-lg-2 col-xl-2 offset-lg-1">
-                  <h5 class="mb-0">{{$product->price * $qty}}₽</h5>
+                  <h5 class="mb-0">{{$amount}} ₽</h5>
                 </div>
                 <div class="col-md-4 col-lg-1 col-xl-1 text-end">
                 <form action="{{route('deleteFromCart',$product->id)}}" method="post">
@@ -67,12 +71,16 @@
           </div>
           
           @empty
-            <h2 class="text-muted">Добавьте товар в корзину</h2>
+            <h2 class="text-dark text-center"> <b >Невозможно</b>  оформить товар! <br> Пожалуйста, добавьте товар в корзину.</h2>
+            <div class="text-center">
+              <strong class="text-muted">Перейти <a href="{{route('catalog')}}" class="text-decoration-none">в каталог</a></strong>
+            </div>
+            
             @endforelse 
             <div class="card">
             <div class="card-body">
               <button type="button" class="btn btn-warning btn-block btn-lg text-end">Оформить заказ</button>
-              <strong>Итого: </strong>
+              <strong class="px-3">Итого: {{$sum}} ₽</strong>
             </div>
           </div>
         </div>

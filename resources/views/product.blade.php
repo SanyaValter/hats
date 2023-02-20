@@ -15,8 +15,7 @@
             <strong>Модель: {{ $product->model }}</strong>
         </ul>
         <a href="{{route('main')}}" class="btn btn-outline-dark">Главная страница</a>
-        <a href="{{route('catalog')}}" class="btn btn-outline-dark">Каталог</a>
+        <a href="{{route('catalog')}}" class="btn btn-warning">Каталог</a>
         </div>
-        
     </div>
 @endsection

@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="text-center py-3">
-        <a class="text-center text-dark text-decoration-none fs-2 aligh-items-center btn" href="{{ request()->fullUrlWithQuery(['category' => null]) }}">Показать всё</a>
+        <a class="text-center text-dark text-decoration-none fs-2 aligh-items-center btn" href="{{ request()->fullUrlWithQuery(['category' => null]) }}"> Показать все товары</a>
     </div>
     <section>
     <div class="container px-4" id="custom-cards">
@@ -117,8 +117,8 @@
               
     @empty
     <div class="text-center">
-        <strong class="text-center fs-3">Товар скоро будет в наличии</strong>
-        <p class="text-muted">Выберите другую категорию</p>
+        <strong class="text-center fs-3">Товар скоро будет в наличии.</strong>
+          <p class="text-muted">Выберите другую категорию.</p>
     </div>
 
 @endforelse 

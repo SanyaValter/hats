@@ -16,31 +16,27 @@
 </section>
 <section>
     <div class="container">
-        <strong class="fs-3 text-center">
-            Обратная связь
-        </strong>
-        <form class="form-inline">
-            <label class="my-1 mr-2 fs-3" for="inlineFormCustomSelectPref">Причина обратной связи </label>
-            <select class="custom-select my-1 mr-sm-2 fs-5" id="inlineFormCustomSelectPref">
-              <option selected>Другое</option>
-              <option value="1">Как заказать</option>
-              <option value="2">Где вас найти</option>
-              <option value="3">Работа</option>
-            </select>
-
-            <form class="form-inline">
-                <label class="sr-only fs-4" for="inlineFormInputName2"></label>
-                <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Ваше имя">
-
-                <label class="sr-only fs-4" for="inlineFormInputGroupUsername2 ">Введите ваш Email</label>
-                <div class="input-group mb-2 mr-sm-2">
-                  <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="name@mail.ru">
-                </div>
-
-                <button type="submit" class="btn btn-outline-dark mb-2">Отправить</button>
-              </form>
-
+    <div id="msgSubmit" class=" text-center hidden h1">Обратная связь!</div>
+        <div class="row">
+            <div class="form-group col-sm-6 ">
+                <label for="name" class="h4">Имя</label>
+                <input type="text" class="form-control" id="name" placeholder="Введите ваше имя" required>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="email" class="h4">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Введите ваш Email" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="text-center m-2 fs-3 h4">
+                <label for="message" class="h3 text-center">Сообщение</label>
+            </div>
+            
+            <textarea id="message" class="form-control" rows="4" placeholder="Напишите ваше сообщение" required></textarea>
+        </div>
+        <button type="submit" id="form-submit" class="btn btn-dark btn-lg pull-right m-1 ">Отправть</button>
     </div>
+
 </section>
 
 @endsection

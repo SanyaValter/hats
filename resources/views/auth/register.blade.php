@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container p-3">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -65,14 +65,14 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="check" id="check" {{ old('remember') ? 'checked' : '' }} required >
                                     <label class="form-check-label" for="remember">
-                                        {{ __('обработку персональных данных') }}
+                                        {{ __('Обработку персональных данных') }}
                                     </label>
                                 </div>
                             </div>
                         </div>
 
                         <div class="text-center">
-                             <p> Уже зарегистрированы?<a class="btn btn-link text-decoration-none text-dark px-1  " href="{{ route('login') }}">Войти</a></p>
+                             <p> Уже зарегистрированы?<a class="btn btn-link text-decoration-none  px-1  " href="{{ route('login') }} ">Войти</a></p>
                            </div>
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">

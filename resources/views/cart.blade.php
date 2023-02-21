@@ -73,7 +73,7 @@
           @empty
             <h2 class="text-dark text-center"> <b >Невозможно</b>  оформить товар! <br> Пожалуйста, добавьте товар в корзину.</h2>
             <div class="text-center">
-              <strong class="text-muted">Перейти <a href="{{route('catalog')}}" class="text-decoration-none">в каталог</a></strong>
+              <strong class="text-muted">Перейдите в каталог  <a href="{{route('catalog')}}" class="text-decoration-none">здесь</a></strong>
             </div>
             
             @endforelse 

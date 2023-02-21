@@ -15,16 +15,16 @@
                         Основные разделы сайта
                     </h6>
                     <p>
-                        <a href="{{route('catalog')}}" class="text-reset">Каталог</a>
+                        <a href="{{route('catalog')}}" class="text-reset text-decoration-none">Каталог</a>
                     </p>
                     <p>
-                        <a href="{{route('Contacts')}}" class="text-reset">Контакты</a>
+                        <a href="{{route('Contacts')}}" class="text-reset text-decoration-none">Контакты</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Написать нам</a>
+                        <a href="{{route('Contacts')}}" class="text-reset text-decoration-none">Обратная связь</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Работа в компании</a>
+                        <a href="#!" class="text-reset text-decoration-none">Работа в компании</a>
                     </p>
                     </div>
 

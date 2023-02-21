@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container p-3">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                             <p> Нету аккаунта? <a class="btn btn-link text-decoration-none text-dark px-1  " href="{{ route('register') }}">Зарегистрируйтесь</a></p>
+                             <p> Нету аккаунта? <a class="btn btn-link text-decoration-none  px-1  " href="{{ route('register') }}">Зарегистрируйтесь</a></p>
                            </div>
 
                         <div class="row mb-0">

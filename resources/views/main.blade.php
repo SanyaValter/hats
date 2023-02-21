@@ -3,14 +3,17 @@
 @section('content')
 <link rel="stylesheet" href="{{asset('css\main.css')}}">
 
-    <video  autoplay muted loop id="Video">
-  <source  src="{{asset('video\video.mp4')}}" type="video/mp4">
-</video>
+    <div class="container py-3" style="max-width:900px;">
+           <video  class="rounded " autoplay muted loop id="Video" style="border: radius 20px;">
+                <source  src="{{asset('video\Магазин шапок. Обзор (720p).mp4')}}" type="video/mp4">
+            </video>
+    </div>
+ 
 
 
     <section>
-        <div class="position-relative overflow-hidden p-3 p-md-3 m-md-3 text-center  fixed-top">
-            <div class="col-md-5 my-5 p-lg-4 mx-auto" style="border-radius: 20px">
+        <div class="position-relative overflow-hidden p-3 p-md-3 text-center  fixed-top">
+            <div class="col-md-5 my-5  mx-auto" style="border-radius: 20px">
                 <h1 class="display-4 font-wight-normal">О компании</h1>
                 <p class="lead font-wight-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa repudiandae accusamus delectus? Quidem voluptatum sint, fugiat nulla deserunt corrupti natus ipsum vero dignissimos cupiditate eos consequuntur numquam rerum tempore at!</p>
                 <p class="text-muted fs-4">Все голоыне уборы в одном магазине!</p>
